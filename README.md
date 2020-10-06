@@ -2,9 +2,17 @@
 
 - Pandoc conversion from [HTML](neurips2020proc/data/AcceptedPapersInitial.html) ([via neurips.cc](https://neurips.cc/Conferences/2020/AcceptedPapersInitial))
   to markdown, manually trimmed ⇢ [AcceptedPapersInitial.md](neurips2020proc/data/AcceptedPapersInitial.md)
-- Markdown converted to Pandas dataframe `accepted_papers` by [parse_accepts.py](neurips2020proc/src/parse_accepts.py)
+- Markdown converted to pandas DataFrame `accepted_papers` by [parse_accepts.py](neurips2020proc/src/parse_accepts.py)
+- pandas DataFrame exported to TSV ⇢ [accepted_paper_listings.tsv](neurips2020proc/data/accepted_paper_listings.tsv)
+  (writing to this file by default switched off by a parameter in [__main__.py](__main__.py), to avoid accidental overwrites)
 
-Drop into a shell with the dataset by running
+To simply view the listings in the `less` pager:
+
+```sh
+column -t -s $'\t' neurips2020proc/data/accepted_paper_listings.tsv | less -S
+```
+
+Otherwise, drop into a shell with the dataset by running
 
 ```sh
 python -im neurips2020proc
@@ -14,7 +22,12 @@ python -im neurips2020proc
 Parsed ⠶ List of 1900 papers                                                                                         
 ```
 
-Then the `PaperList` object (a list of `Paper` objects) can be inspected or processed:
+- This is the output from [__main__.py](__main__.py) which calls:
+  - `src.parse_accepts.parse_listings` which parses the markdown listings (which came from pandoc)
+  - [disabled] `src.util.tsv_writer.write_df_to_tsv` to create
+    [accepted_paper_listings.tsv](neurips2020proc/data/accepted_paper_listings.tsv)
+
+From this shell, the `PaperList` object (a list of `Paper` objects) can be inspected or processed:
 
 ```py
 for p in accepted_paper_list: print(p)
