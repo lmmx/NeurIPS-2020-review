@@ -1,15 +1,4 @@
-#### NeurIPS 2020 Accepted Papers 1900
-
-[If you are an author on a paper here and your institution is missing,
-you should immediately update your CMT profile and the corresponding
-profile at]{.highlight} <https://neurips.cc/EditProfile>.
-
-Please read this guide on [how to design for color
-blindness](https://usabilla.com/blog/how-to-design-for-color-blindness/)
-for tips to [make your poster friendlier to the
-color-blind.]{.highlight}
-
-------------------------------------------------------------------------
+#### NeurIPS 2020 Accepted Papers (1900)
 
 **Continuous Surface Embeddings**\
 *Natalia Neverova (Facebook AI Research) · David Novotny (Facebook AI
@@ -9865,26 +9854,3 @@ of Nottingham) · James Goulding (University of Nottingham)*
 (UMass Amherst) · Dongxu Zhang (University of Massachusetts Amherst) ·
 Luke Vilnis (University of Massachusetts, Amherst) · Xiang Li (UMass
 Amherst) · Andrew McCallum (UMass Amherst)*
-
-</div>
-
-</div>
-
-</div>
-
-<div class="hidden">
-
-Successful Page Load
-
-</div>
-
-<div class="hidden">
-
-Do not remove: This comment is monitored to verify that the site is
-working properly
-
-</div>
-
-![Clicky](//in.getclicky.com/100964351ns.gif){width="1" height="1"}
-
-![Clicky](//in.getclicky.com/100964360ns.gif){width="1" height="1"}
