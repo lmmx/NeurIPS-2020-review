@@ -1,18 +1,14 @@
-import pandas as pd
 from ..data import data_dir
 from .structure import Paper, PaperList
 
-accepted_papers = data_dir / "AcceptedPapersInitial.md"
+__all__ = ["parse_listings"]
 
-with open(accepted_papers, "r") as f:
+accepted_papers_md = data_dir / "AcceptedPapersInitial.md"
+
+with open(accepted_papers_md, "r") as f:
     md_lines = [l.rstrip("\n") for l in f.readlines()]
 
-def process_papers():
-    processed_papers = parse_md_lines()
-    #accepts_df = pd.DataFrame(processed_papers)
-    return processed_papers #accepts_df
-
-def parse_md_lines(md_lines=md_lines):
+def parse_listings(md_lines=md_lines):
     papers = []
     header_read = False
     in_paper_block = False
