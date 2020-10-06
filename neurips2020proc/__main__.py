@@ -1,8 +1,5 @@
 from .src.parse_accepts import *# accepts_df
 
-def main():
-    accepts_df = process_papers()
-    print(accepts_df) 
-
 if __name__ == "__main__":
-    main()
+    accepted_paper_list = process_papers()
+    print(f"Parsed ⠶ {accepted_paper_list}")

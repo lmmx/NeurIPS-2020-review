@@ -16,7 +16,9 @@ class Paper:
         return title, attribution
 
     def __repr__(self):
-        return f'"{self.title}"'
+        first_auth_surname = self.attribution.authors.abbrev_repr()
+        etal = "" if len(self.attribution.authors) == 1 else " et al."
+        return f'{first_auth_surname}{etal} — "{self.title}"'
 
 class PaperList(list):
     def __init__(self, paperlist):
